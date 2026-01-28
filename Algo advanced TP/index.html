@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Algorithms Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-building-columns" style="color: var(--accent-color); margin-right: 10px;"></i>
+            <span>LAB V1.0</span>
+        </div>
+
+        <div class="menu-section">
+            <h3>MAIN MENU</h3>
+            <a href="#" class="nav-item active">
+                <i class="fa-solid fa-table-cells-large"></i> Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-chart-simple"></i> Analytics
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-clock-rotate-left"></i> History
+            </a>
+        </div>
+
+        <div class="menu-section">
+            <h3>SYSTEM</h3>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-gear"></i> Preferences
+            </a>
+        </div>
+
+        <div class="memory-usage">
+            <div class="memory-label">MEMORY USAGE</div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 40%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <header>
+            <h1 class="page-title">Advanced Algorithms<br>Lab</h1>
+            <p class="subtitle">Computational benchmarking of<br>knapsack combinatorial optimization.</p>
+        </header>
+
+        <div class="content-grid">
+
+            <!-- Controls Section -->
+            <div class="card controls-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-sliders" style="color: var(--accent-color);"></i>
+                    <h2>Config</h2>
+                </div>
+
+                <div class="input-group">
+                    <label>NUMBER OF ITEMS</label>
+                    <input type="number" id="numItems" value="100" min="1">
+                </div>
+
+                <div class="input-group">
+                    <label>KNAPSACK CAPACITY</label>
+                    <input type="number" id="capacity" value="500" min="1">
+                </div>
+
+                <div class="action-container">
+                    <button id="runBtn" class="primary-btn">
+                        <i class="fa-solid fa-rocket"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <div class="section-title">
+                    <i class="fa-solid fa-chart-line" style="color: var(--accent-color);"></i>
+                    <h2>Benchmark Analytics</h2>
+                </div>
+
+                <div class="results-card">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>ALGORITHM</th>
+                                <th>VALUE</th>
+                                <th>TIME (ms)</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody">
+                            <!-- Rows will be populated by JS -->
+                            <tr>
+                                <td>Greedy (Density)</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td><span class="status-dot dot-orange"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Dynamic Programming</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td><span class="status-dot dot-teal"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Genetic Algorithm</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td><span class="status-dot dot-purple"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Backtracking</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td><span class="status-dot dot-red"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
